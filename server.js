@@ -15,7 +15,8 @@ app.get("/recipes/:ingredient", function(requ, response) {
   	console.log(req)
 	request(`https://recipes-goodness.herokuapp.com/recipes/${req}`, function(err, res, body){
   let unwrangledData = JSON.parse(body)
-  response.send(unwrangledData)
+  let recipes = unwrangledData.results
+  response.send(recipes)
 })
 
 	
