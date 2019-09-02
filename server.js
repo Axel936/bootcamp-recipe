@@ -12,7 +12,6 @@ app.use(express.static(path.join(__dirname, "node_modules")));
 
 app.get("/recipes/:ingredient", function(requ, response) {
 	let req = requ.params.ingredient
-  	console.log(req)
 	request(`https://recipes-goodness.herokuapp.com/recipes/${req}`, function(err, res, body){
   let unwrangledData = JSON.parse(body)
   let recipes = unwrangledData.results
