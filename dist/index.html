@@ -1,29 +1,30 @@
-
 <!DOCTYPE html>
-<html lang=en>
-<head>
-	<link rel=stylesheet href=style.css>
-    	<title>Document</title>
-</head>
-<body>
-	<input  id='input'type="text">
-	<button id="button" onclick="showRecipes()"></button>
-	<div></div>
-	<script id="something-template" type="x-hanldebars-template">
-		{{#each key}}
-		<div class="recipe">
-			<h1>{{title}}</h1>	
-			<img src = "{{thumbnail}}" alt="">
-			{{#each ingredients}}
-				<li>{{this}}</li>
-			{{/each}}
-		</div>
-		{{/each}}
-	</script>
-	<script src="jquery/dist/jquery.js"></script>
-	<script src="handlebars/dist/handlebars.js"></script>
-	<script src="render.js"></script>
-	<script src=main.js></script>
-</body>
-</html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="input" type="text" />
+    <button id="button" type="button" onclick="showRecipes()"></button>
+    <div class="container">
 
+    </div>
+
+    <script id="something-template" type="x-hanldebars-template">
+      {{#each key}}
+      <div class="recipe">
+      	<h1>{{title}}</h1>
+      	<img src = "{{thumbnail}}" alt="">
+      	{{#each ingredients}}
+      	<li>{{this}}</li>
+      	{{/each}}
+      </div>
+      {{/each}}
+    </script>
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="handlebars/dist/handlebars.js"></script>
+    <script src="render.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
